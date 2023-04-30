@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background-color:aqua;
+    border-radius: 30px;
+}
+.triangle{
+    height: 0;
+    width: 0;
+    border-left:solid 50px transparent;
+    border-right:solid 50px transparent;
+    border-bottom:solid 100px black;
+    position: absolute;
+    top: 250px;
+    left: 250px;
+    animation-name: spinning;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+}
+.square{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 250px;
+    background-color: brown;
+    border-radius: 30px;
+    animation-name: moving-around;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+@keyframes moving-around {
+    0%{
+     left: 0px;   
+     top: 250px;
+    }
+    25%{
+        left: 250px;
+        top: 0px;
+    }
+    50%{
+        left: 500px;
+        top: 250px;
+    }
+    75%{
+        left: 250px ;
+        top: 500px;
+    }
+    100%{
+        left: 0px;
+        top: 250px;
+    }
+}
+@keyframes spinning{
+    from{
+        transform:rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
